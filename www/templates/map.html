@@ -1,0 +1,27 @@
+<ion-view title="{{map.title}}">
+  <ion-content class="has-header">
+  	<div class="fetching" ng-show="fetching">
+	  <div class="ion-loading-b" data-pack="default" data-tags="spinner, waiting, refresh, animation" data-animation="true"></div>
+	</div>
+    <div class="list card" ng-hide="fetching">
+
+	  <div class="item item-avatar">
+	    <img src="img/ra.png">
+	    <h2>{{map.title}}</h2>
+	    <p>Author: {{map.author}}</p>
+	  </div>
+
+	  <div class="item item-body">
+	  	<img class="full-image" alt="Map image" src="data:image/png;base64,{{map.minimap}}" />
+	    <p>
+	      {{map.description}}
+	    </p>
+	    <p>
+	      <a href="" class="subdued">Max Players: {{map.players}}</a>
+	      <a href="" class="subdued">Mod: {{map.game_mod}}</a>
+	    </p>
+	  </div>
+
+	</div>
+  </ion-content>
+</ion-view>
